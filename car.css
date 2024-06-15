@@ -1,0 +1,53 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+  width: 100vw;
+  overflow: hidden;
+}
+.car {
+   position: absolute;
+   margin-top: 10vh;
+   height: 20vh;
+   width: 20vw;
+   border-radius: 50px;
+   object-fit: calc(10vh);
+   z-index: 3;
+  }
+#score{
+  position: absolute;
+  top: 1vh;
+  height: 10vh;
+  width: 8vw;
+  text-align: center;
+  padding-bottom: 1vh;
+  margin-left: 46vw;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  z-index: 5;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 8vh;
+}
+#road{
+    height: 80vh;
+    width: 100vw;
+    background-color: rgb(25, 25, 25);
+}
+.footPath{
+  height: 10vh;
+  width: 100vw;
+}
+  .block{
+position: absolute;
+height: 10vh;
+width: 14vw;
+margin-left: 90vw;
+  }
+  .yellow{
+    background-color: yellow;
+  }
+  .black{
+    background-color: black;
+  }
