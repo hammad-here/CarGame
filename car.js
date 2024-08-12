@@ -89,7 +89,7 @@ let carTages=[]
 //creating car images
 function carMaking(){
 let car = document.createElement("img")
-car.setAttribute("src","assets\\"+carsLoc[Math.floor(Math.random()*3)])
+car.setAttribute("src",carsLoc[Math.floor(Math.random()*3)])
 car.setAttribute("class","car")
 car.style.marginLeft=80+"vw"
 let carObj={leftMargin:80}
