@@ -4,11 +4,11 @@ let blockObjList=[]
 let score=0;
 
 //function to create block elements
-function creatingBlockTags(parentId,marginleft){
+function creatingBlockTags(parentId){
    let block = document.createElement("span")
    block.style.background=lastColor
    block.setAttribute("class","block")
-   block.style.marginLeft=marginleft + "vw"
+   block.style.marginLeft=100 + "vw"
    document.getElementById(parentId).append(block)
    blockTagList.push(block)
    blockObjList.push({marginLeft:100})
@@ -29,8 +29,8 @@ let movingBlocks = setInterval(()=>{
            
 //making new blocks
 let makingNewBlocks = setInterval(()=>{
-    creatingBlockTags("up",100)
-    creatingBlockTags("down",100)
+    creatingBlockTags("up")
+    creatingBlockTags("down")
     lastColor = lastColor=="yellow"?"black":"yellow" 
 },500)
                
@@ -81,6 +81,12 @@ function moveCar(dir){
 document.addEventListener("keydown",(e)=>{
  moveCar(e.key) 
 })
+
+let contollers = document.getElementsByClassName("button")
+contollers[0].onclick = ()=>{moveCar("ArrowUp")}
+contollers[1].onclick = ()=>{moveCar("ArrowRight")}
+contollers[2].onclick = ()=>{moveCar("ArrowLeft")}
+contollers[3].onclick = ()=>{moveCar("ArrowDown")}
 
 let carsLoc=["car1.jpeg","car3.jpg","car4.jpg"]
 let carDetail=[]
@@ -158,3 +164,9 @@ function gameOver(){
     game_over.innerText="GAME OVER!!!"
     document.getElementById("road").appendChild(game_over)
 }
+
+setInterval(()=>{
+    if(screen.height>screen.width){
+        alert("rotate your device first to continue the game")
+    }
+},2000)
